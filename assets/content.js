@@ -8,7 +8,7 @@ window.SITE = {
   name: "Inam Khan", // EDIT: your displayed name
   title: "Researcher | Software Engineer | Developer",
   tagline: "Developing practical solutions through research, engineering, and thoughtful software design.",
-  photo: "assets/profile-placeholder.svg", // e.g. "assets/profile.jpg"
+  photo: "assets/Profile.jpg", // e.g. "assets/profile.jpg"
   email: "your.email@example.com", // EDIT
   phone: "", // Optional; leave empty to hide
   location: "Your City, Your Country",
