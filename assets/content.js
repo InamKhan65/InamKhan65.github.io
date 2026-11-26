@@ -35,14 +35,14 @@ window.SITE = {
     {name:"Urdu",level:"National language"},
      {name:"Pashto",level:"native language"}
   ],
-  interests: ["AI Agents","Agentic AI","Multi-Agent Systems","Large Language Models (LLMs)","Retrieval-Augmented Generation (RAG)","Intelligent Autonomous Systems","AI in Education","Educational Technology","Intelligent Tutoring Systems","Personalized Learning","Augmented Reality (AR)","Computer Vision","Machine Learning","Deep Learning","Human-Centered AI","Human-Computer Interaction"],
+  interests: ["AI Agents","Agentic AI","Multi-Agent Systems","Large Language Models (LLMs)","Retrieval-Augmented Generation (RAG)","Intelligent Autonomous Systems","AI in Education","Educational Technology","Intelligent Tutoring Systems","Personalized Learning","Augmented Reality (AR)","Computer Vision","Machine Learning","Deep Learning","Human-Computer Interaction"],
 
 education: [
   {
     period: "Sep 2024 – Jul 2026",
     title: "MS, Computer Science and Technology",
     place: "Beijing Institute of Technology · Beijing, China",
-    gpa: "3.70/4.00",
+    cgpa: "3.70/4.00",
     thesis: "Design and Evaluation of an AI-Based Real-Time Customer Support Agent",
     supervisorName: "Professor Zhao Fengnian",
     supervisorUrl: "https://cs.bit.edu.cn/szdw/jsml/sssds/441430e4ba2248e1b7ecd43d8a2d9214.htm",
@@ -52,10 +52,10 @@ education: [
     period: "Aug 2019 – Sep 2023",
     title: "BS, Computer Science",
     place: "Islamia College University Peshawar · Peshawar, Pakistan",
-    gpa: "3.75/4.00",
+    cgpa: "3.75/4.00",
     thesis: "Development of an Augmented Reality-Based Educational System with Interactive Visualization",
     supervisorName: "Associate Professor Atif Khan",
-    supervisorUrl: "https://www.icp.edu.pk/icp/staff_detail.php?cat_id=82",
+    supervisorUrl: "https://scholar.google.com/citations?user=3iI5cKEAAAAJ&hl=en",
     funding: "Ehsaas Government Scholarship.",
     honors: "Silver medalist, batch 2019–2023."
   }
