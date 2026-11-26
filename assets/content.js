@@ -31,13 +31,18 @@ window.SITE = {
   ],
   languages: [
     {name:"English",level:"Fluent"},
-    {name:"Chinese",level:"Intermediate"},
-    {name:"Urdu",level:"National language"}
+    {name:"Chinese",level:"Intermediate level"},
+    {name:"Urdu",level:"National language"},
+     {name:"Pashto",level:"native language"}
   ],
   interests: ["AI Agents","Agentic AI","Multi-Agent Systems","Large Language Models (LLMs)","Retrieval-Augmented Generation (RAG)","Intelligent Autonomous Systems","AI in Education","Educational Technology","Intelligent Tutoring Systems","Personalized Learning","Augmented Reality (AR)","Computer Vision","Machine Learning","Deep Learning","Human-Centered AI","Human-Computer Interaction"],
 
   education: [
-    {period:"Sep 2024 – Jul 2026",title:"MS, Computer Science and Technology",place:"Beijing Institute of Technology · Beijing, China",details:"GPA: 3.70/4.00. Thesis: Design and Evaluation of an AI-Based Real-Time Customer Support Agent. Supervisor: Professor Zhao Fengnian. Chinese Government Scholarship (CSC), fully funded. Coursework included machine learning, deep learning, computer vision, NLP, neural networks, and research methodology."},
+    {period:"Sep 2024 – Jul 2026",title:"MS, Computer Science and Technology",place:"Beijing Institute of Technology · Beijing, China",details:"GPA: 3.70/4.00. 
+       Thesis: Design and Evaluation of an AI-Based Real-Time Customer Support Agent. 
+       Supervisor: Professor Zhao Fengnian. 
+       Funding: Chinese Government Scholarship (CSC) 
+       Coursework included machine learning, deep learning, computer vision, NLP, neural networks, and research methodology."},
     {period:"Aug 2019 – Sep 2023",title:"BS, Computer Science",place:"Islamia College University Peshawar · Peshawar, Pakistan",details:"GPA: 3.75/4.00. Thesis: Development of an Augmented Reality-Based Educational System with Interactive Visualization. Supervisor: Associate Professor Atif Khan. Ehsaas Government Scholarship. Silver medalist, batch 2019–2023."}
   ],
   experience: [
