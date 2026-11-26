@@ -5,12 +5,12 @@
 */
 window.SITE = {
   name: "Inam Ullah",
-  title: "Computer Science Researcher | Computer Vision & AI",
-  tagline: "Human-centered computer vision, deep learning, intelligent systems, and applied AI.",
+  title: "AI Agents | Educational Technology | Computer Vision & ML",
+  tagline: "AI agents, educational technology, computer vision, and machine learning.",
   photo: "Pictures/Profile.jpg",
   email: "inamkhan@bit.edu.cn",
   alternateEmail: "191265@icp.edu.pk",
-  phone: "+86 18813035892", // To hide this publicly, set phone: ""
+  phone: "+86 188 1303 5892", // To hide this publicly, set phone: ""
   location: "Beijing, China | Originally from Swat, Pakistan",
   cv: "assets/Inam_Ullah_CV.pdf",
   cvAvailable: true,
@@ -19,22 +19,22 @@ window.SITE = {
   googleScholar: "", orcid: "", researchGate: "",
 
   about: [
-    "Hello! I am Inam Ullah, a computer science researcher with an MS in Computer Science and Technology from Beijing Institute of Technology, China. My work focuses on deep learning, computer vision, and intelligent AI systems.",
-    "I have researched and developed systems for real-time human detection and tracking, visual recognition, retail video analytics, and AI-based customer support. My work includes building and evaluating YOLO-based detection systems and large language model applications using retrieval-augmented generation (RAG).",
-    "I am particularly interested in human-centered computer vision, understanding pedestrian behavior, visual perception, and intelligent autonomous systems. I enjoy translating research ideas into practical, reliable applications and evaluating how well they perform in real-world conditions."
+    "Hello! I am Inam Ullah, a computer science researcher with an MS in Computer Science and Technology from Beijing Institute of Technology, China. My primary research interests are AI agents, agentic AI, and multi-agent systems, with a particular interest in building intelligent systems that can retrieve information, interact with users, and support complex tasks.",
+    "My experience includes developing LLM-based conversational applications using retrieval-augmented generation (RAG), computer vision systems for human detection and tracking, and an augmented reality application for interactive mathematics learning. I am interested in extending this work toward more capable AI agents and exploring how agentic AI can support education and personalized learning.",
+    "My broader interests also include computer vision and machine learning, including object detection, visual recognition, deep learning models, and the evaluation of practical AI systems. I aim to connect research with useful, reliable, and human-centered applications."
   ],
   highlights: [
-    {icon:"eye", title:"Computer Vision",description:"Human detection, object tracking, aerial video analysis, and visual recognition."},
-    {icon:"brain",title:"Deep Learning & AI",description:"CNNs, YOLOv11, transformer-based models, and model evaluation."},
-    {icon:"code",title:"LLM & RAG Systems",description:"Conversational agents using large language models and domain-specific knowledge bases."},
-    {icon:"chart",title:"Applied Research",description:"Experimental design, data analysis, model robustness, and real-time system integration."}
+    {icon:"brain",title:"AI Agents & Multi-Agent Systems",description:"LLM-based conversational applications, retrieval-augmented generation (RAG), intelligent assistants, and emerging agentic and multi-agent architectures."},
+    {icon:"book",title:"Educational Technology & AI in Education",description:"AI-supported learning, intelligent tutoring, personalized education, augmented reality, and interactive learning applications."},
+    {icon:"eye",title:"Computer Vision",description:"Human detection, object tracking, facial expression recognition, visual recognition, and video analytics."},
+    {icon:"chart",title:"Machine Learning & Deep Learning",description:"CNNs, YOLO-based models, feature engineering, model development, training, and performance evaluation."}
   ],
   languages: [
-    {name:"English",level:"IELTS overall band 7.0"},
+    {name:"English",level:"Fluent"},
     {name:"Chinese",level:"Intermediate"},
     {name:"Urdu",level:"National language"}
   ],
-  interests: ["Computer Vision","Deep Learning","Human Detection & Tracking","Pedestrian Behavior Understanding","Visual Perception","Machine Learning","Autonomous Systems","Natural Language Processing","Large Language Models","Augmented Reality"],
+  interests: ["AI Agents","Agentic AI","Multi-Agent Systems","Large Language Models (LLMs)","Retrieval-Augmented Generation (RAG)","Intelligent Autonomous Systems","AI in Education","Educational Technology","Intelligent Tutoring Systems","Personalized Learning","Augmented Reality (AR)","Computer Vision","Machine Learning","Deep Learning","Human-Centered AI","Human-Computer Interaction"],
 
   education: [
     {period:"Sep 2024 – Jul 2026",title:"MS, Computer Science and Technology",place:"Beijing Institute of Technology · Beijing, China",details:"GPA: 3.70/4.00. Thesis: Design and Evaluation of an AI-Based Real-Time Customer Support Agent. Supervisor: Professor Zhao Fengnian. Chinese Government Scholarship (CSC), fully funded. Coursework included machine learning, deep learning, computer vision, NLP, neural networks, and research methodology."},
