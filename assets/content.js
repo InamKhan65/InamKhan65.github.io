@@ -11,7 +11,7 @@ window.SITE = {
   email: "inamkhan@bit.edu.cn",
   alternateEmail: "191265@icp.edu.pk",
   phone: "+86 188 1303 5892", // To hide this publicly, set phone: ""
-  location: "Beijing, China | Originally from Swat, Pakistan",
+  location: "Beijing, China",
   cv: "assets/Inam_Ullah_CV.pdf",
   cvAvailable: true,
   github: "https://github.com/InamKhan65",
