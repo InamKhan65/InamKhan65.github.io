@@ -15,7 +15,43 @@ $('toggle-contacts').onclick=()=>{let open=$('sidebar-details').classList.toggle
 const sections=[['About','about'],['Resume','resume'],['Projects','research'],['Publications','publications'],['Awards','awards'],['Sports and Travel','projects'],['Contact','contact']];$('navigation').innerHTML=sections.map(([label,key])=>`<button type="button" data-tab="${key}" aria-label="Show ${label}">${label}</button>`).join('');$('navigation').addEventListener('click',e=>{let b=e.target.closest('[data-tab]');if(b) location.hash=b.dataset.tab});window.addEventListener('hashchange',render);render();}
 const card=(i,t,d)=>`<article class="feature-card">${icon(i)}<div><h4>${safe(t)}</h4><p>${safe(d)}</p></div></article>`;
 function about(){return heading('About Me')+`<div class="bio">${D.about.map(p=>`<p>${safe(p)}</p>`).join('')}</div><h3>What I Do</h3><div class="feature-grid">${D.highlights.map(h=>card(h.icon,h.title,h.description)).join('')}</div><h3>Research Interests</h3><div class="tag-cloud">${D.interests.map(v=>`<span>${safe(v)}</span>`).join('')}</div><h3>Languages</h3><div class="language-list">${D.languages.map(l=>`<div><strong>${safe(l.name)}</strong><span>${safe(l.level)}</span></div>`).join('')}</div>`}
-const timeline=(title,items)=>`<section class="timeline"><h3>${icon(title==='Education'?'book':'briefcase')}${safe(title)}</h3><ol>${items.map(v=>`<li><span class="period">${safe(v.period)}</span><h4>${safe(v.title)}</h4><p class="muted">${safe(v.place)}</p><p>${safe(v.details)}</p></li>`).join('')}</ol></section>`;
+
+const timeline = (title, items) => `
+<section class="timeline">
+  <h3>${icon(title === 'Education' ? 'book' : 'briefcase')}${safe(title)}</h3>
+  <ol>
+    ${items.map(v => `
+      <li>
+        <span class="period">${safe(v.period)}</span>
+        <h4>${safe(v.title)}</h4>
+        <p class="muted">${safe(v.place)}</p>
+
+        ${v.gpa ? `<p><strong>GPA:</strong> ${safe(v.gpa)}</p>` : ''}
+
+        ${v.thesis ? `<p><strong>Thesis:</strong> ${safe(v.thesis)}</p>` : ''}
+
+        ${v.supervisorName ? `
+          <p>
+            <strong>Supervisor:</strong>
+            <a href="${safe(v.supervisorUrl)}"
+               target="_blank"
+               rel="noopener noreferrer"
+               style="color: inherit; text-decoration: underline; text-decoration-color: #f5c451; text-underline-offset: 3px;">
+              ${safe(v.supervisorName)}
+            </a>
+          </p>
+        ` : ''}
+
+        ${v.funding ? `<p><strong>Funding:</strong> ${safe(v.funding)}</p>` : ''}
+
+        ${v.honors ? `<p><strong>Honors:</strong> ${safe(v.honors)}</p>` : ''}
+
+        ${v.details ? `<p>${safe(v.details)}</p>` : ''}
+      </li>
+    `).join('')}
+  </ol>
+</section>`;
+
 function resume(){return heading('Resume','Education, professional experience, and technical capabilities.')+timeline('Education',D.education)+timeline('Experience',D.experience)+`<h3>Technical Expertise</h3><div class="feature-grid">${D.skillGroups.map(g=>card('code',g.title,g.items.join(' · '))).join('')}</div>`}
 function research(){return heading('Projects','Research projects, experiments, and practical AI systems.')+`<div class="filters" id="project-filters">${['All',...new Set(D.projects.map(p=>p.category))].map((x,i)=>`<button data-filter="${safe(x)}" class="${i===0?'selected':''}">${safe(x)}</button>`).join('')}</div><div class="project-grid" id="project-list">${projectCards(D.projects)}</div>`}
 function publications(){let data=D.publications;return heading('Publications','Journal articles, conference papers, and scholarly contributions.')+`<div class="filters" id="pub-filters"><button class="selected" data-filter="All">All</button><button data-filter="Journal">Journal</button><button data-filter="Conference">Conference</button></div><div id="pub-list">${pubCards(data)}</div>`}
