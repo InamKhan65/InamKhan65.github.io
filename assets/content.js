@@ -37,14 +37,30 @@ window.SITE = {
   ],
   interests: ["AI Agents","Agentic AI","Multi-Agent Systems","Large Language Models (LLMs)","Retrieval-Augmented Generation (RAG)","Intelligent Autonomous Systems","AI in Education","Educational Technology","Intelligent Tutoring Systems","Personalized Learning","Augmented Reality (AR)","Computer Vision","Machine Learning","Deep Learning","Human-Centered AI","Human-Computer Interaction"],
 
-  education: [
-    {period:"Sep 2024 – Jul 2026",title:"MS, Computer Science and Technology",place:"Beijing Institute of Technology · Beijing, China",details:"GPA: 3.70/4.00. 
-       Thesis: Design and Evaluation of an AI-Based Real-Time Customer Support Agent. 
-       Supervisor: Professor Zhao Fengnian. 
-       Funding: Chinese Government Scholarship (CSC) 
-       Coursework included machine learning, deep learning, computer vision, NLP, neural networks, and research methodology."},
-    {period:"Aug 2019 – Sep 2023",title:"BS, Computer Science",place:"Islamia College University Peshawar · Peshawar, Pakistan",details:"GPA: 3.75/4.00. Thesis: Development of an Augmented Reality-Based Educational System with Interactive Visualization. Supervisor: Associate Professor Atif Khan. Ehsaas Government Scholarship. Silver medalist, batch 2019–2023."}
-  ],
+education: [
+  {
+    period: "Sep 2024 – Jul 2026",
+    title: "MS, Computer Science and Technology",
+    place: "Beijing Institute of Technology · Beijing, China",
+    gpa: "3.70/4.00",
+    thesis: "Design and Evaluation of an AI-Based Real-Time Customer Support Agent",
+    supervisorName: "Professor Zhao Fengnian",
+    supervisorUrl: "https://cs.bit.edu.cn/szdw/jsml/sssds/441430e4ba2248e1b7ecd43d8a2d9214.htm",
+    funding: "Chinese Government Scholarship (CSC), fully funded."
+  },
+  {
+    period: "Aug 2019 – Sep 2023",
+    title: "BS, Computer Science",
+    place: "Islamia College University Peshawar · Peshawar, Pakistan",
+    gpa: "3.75/4.00",
+    thesis: "Development of an Augmented Reality-Based Educational System with Interactive Visualization",
+    supervisorName: "Associate Professor Atif Khan",
+    supervisorUrl: "https://www.icp.edu.pk/icp/staff_detail.php?cat_id=82",
+    funding: "Ehsaas Government Scholarship.",
+    honors: "Silver medalist, batch 2019–2023."
+  }
+],
+  
   experience: [
     {period:"Sep 2024 – Present (as listed on CV)",title:"Research Associate",place:"Beijing Institute of Technology · Beijing, China",details:"Developed a YOLOv11-based real-time customer detection and tracking system for retail video analytics. Built and evaluated LLM-based conversational agents with retrieval-augmented generation and domain-specific knowledge. Assessed model accuracy, inference efficiency, and reliability, integrating AI models into end-to-end systems."},
     {period:"Nov 2023 – Jun 2024",title:"Computer Vision & Deep Learning Intern",place:"MK Techsol (Private) Limited · Islamabad, Pakistan",details:"Worked on drone-based human detection for aerial video analysis. Developed and tested CNN-based models for detection and recognition. Performed data preprocessing, training, evaluation, robustness analysis, and real-time optimization."},
