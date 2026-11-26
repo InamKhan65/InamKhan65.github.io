@@ -38,7 +38,7 @@ const timeline = (title, items) => `
           <h4>${safe(v.title)}</h4>
           <p class="muted">${safe(v.place)}</p>
 
-          ${v.cgpa ? `<p><strong>CGPA:</strong> ${safe(v.cgpa)}</p>` : ''}
+          ${v.gpa ? `<p><strong>CGPA:</strong> ${safe(v.gpa)}</p>` : ''}
 
           ${v.thesis ? `<p><strong>Thesis:</strong> ${safe(v.thesis)}</p>` : ''}
 
