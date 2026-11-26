@@ -20,38 +20,40 @@ const timeline = (title, items) => `
 <section class="timeline">
   <h3>${icon(title === 'Education' ? 'book' : 'briefcase')}${safe(title)}</h3>
   <ol>
-    ${items.map(v => `
-      <li>
-        <span class="period">${safe(v.period)}</span>
-        <h4>${safe(v.title)}</h4>
-        <p class="muted">${safe(v.place)}</p>
+    ${items.map(v => {
+      const supervisor = v.supervisorName
+        ? (v.supervisorUrl && valid(v.supervisorUrl)
+            ? `<a href="${safe(v.supervisorUrl)}"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 style="color: inherit; text-decoration: underline; text-decoration-color: #f5c451; text-underline-offset: 3px;">
+                 ${safe(v.supervisorName)}
+               </a>`
+            : safe(v.supervisorName))
+        : '';
 
-        ${v.gpa ? `<p><strong>GPA:</strong> ${safe(v.gpa)}</p>` : ''}
+      return `
+        <li>
+          <span class="period">${safe(v.period)}</span>
+          <h4>${safe(v.title)}</h4>
+          <p class="muted">${safe(v.place)}</p>
 
-        ${v.thesis ? `<p><strong>Thesis:</strong> ${safe(v.thesis)}</p>` : ''}
+          ${v.gpa ? `<p><strong>GPA:</strong> ${safe(v.gpa)}</p>` : ''}
 
-        ${v.supervisorName ? `
-          <p>
-            <strong>Supervisor:</strong>
-            <a href="${safe(v.supervisorUrl)}"
-               target="_blank"
-               rel="noopener noreferrer"
-               style="color: inherit; text-decoration: underline; text-decoration-color: #f5c451; text-underline-offset: 3px;">
-              ${safe(v.supervisorName)}
-            </a>
-          </p>
-        ` : ''}
+          ${v.thesis ? `<p><strong>Thesis:</strong> ${safe(v.thesis)}</p>` : ''}
 
-        ${v.funding ? `<p><strong>Funding:</strong> ${safe(v.funding)}</p>` : ''}
+          ${supervisor ? `<p><strong>Supervisor:</strong> ${supervisor}</p>` : ''}
 
-        ${v.honors ? `<p><strong>Honors:</strong> ${safe(v.honors)}</p>` : ''}
+          ${v.funding ? `<p><strong>Funding:</strong> ${safe(v.funding)}</p>` : ''}
 
-        ${v.details ? `<p>${safe(v.details)}</p>` : ''}
-      </li>
-    `).join('')}
+          ${v.honors ? `<p><strong>Honors:</strong> ${safe(v.honors)}</p>` : ''}
+
+          ${v.details ? `<p>${safe(v.details)}</p>` : ''}
+        </li>
+      `;
+    }).join('')}
   </ol>
 </section>`;
-
 function resume(){return heading('Resume','Education, professional experience, and technical capabilities.')+timeline('Education',D.education)+timeline('Experience',D.experience)+`<h3>Technical Expertise</h3><div class="feature-grid">${D.skillGroups.map(g=>card('code',g.title,g.items.join(' · '))).join('')}</div>`}
 function research(){return heading('Projects','Research projects, experiments, and practical AI systems.')+`<div class="filters" id="project-filters">${['All',...new Set(D.projects.map(p=>p.category))].map((x,i)=>`<button data-filter="${safe(x)}" class="${i===0?'selected':''}">${safe(x)}</button>`).join('')}</div><div class="project-grid" id="project-list">${projectCards(D.projects)}</div>`}
 function publications(){let data=D.publications;return heading('Publications','Journal articles, conference papers, and scholarly contributions.')+`<div class="filters" id="pub-filters"><button class="selected" data-filter="All">All</button><button data-filter="Journal">Journal</button><button data-filter="Conference">Conference</button></div><div id="pub-list">${pubCards(data)}</div>`}
