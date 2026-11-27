@@ -99,3 +99,9 @@ html[data-theme="dark"] .theme-toggle { background: #29292b; color: #f6ca61; bor
   .theme-toggle { flex-basis: 34px; width: 34px; height: 34px; margin-left: 5px; }
   .theme-toggle span { font-size: 17px; }
 }
+
+/* Reduce empty space above the homepage */
+.site-shell {
+    margin-top: 4px !important;
+}
+
