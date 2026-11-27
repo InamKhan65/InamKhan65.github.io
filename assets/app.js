@@ -2,6 +2,23 @@
 'use strict';
 const D=window.SITE;
 const $=id=>document.getElementById(id);
+const THEME_KEY='inam-homepage-theme';
+function getSavedTheme(){try{return localStorage.getItem(THEME_KEY)}catch{return null}}
+function applyTheme(theme,save=true){
+  const selected=theme==='dark'?'dark':'light';
+  document.documentElement.setAttribute('data-theme',selected);
+  if(save){try{localStorage.setItem(THEME_KEY,selected)}catch{}}
+  const button=$('theme-toggle');
+  if(button){
+    button.innerHTML='<span aria-hidden="true">💡</span>';
+    button.setAttribute('aria-label',selected==='light'?'Switch to dark mode':'Switch to light mode');
+    button.setAttribute('title',selected==='light'?'Switch to dark mode':'Switch to light mode');
+    button.setAttribute('aria-pressed',String(selected==='dark'));
+    button.classList.toggle('is-dark',selected==='dark');
+  }
+}
+// A first-time visitor gets Light Mode. A previously selected theme is remembered.
+applyTheme(getSavedTheme()==='dark'?'dark':'light',false);
 if (!document.getElementById('project-card-link-style')) {
   const projectCardStyle = document.createElement('style');
   projectCardStyle.id = 'project-card-link-style';
@@ -18,7 +35,12 @@ function init(){document.title=`${D.name} | Personal Homepage`;$('profile-name')
 let contacts=[['mail','EMAIL',D.email,D.email&&D.email.includes('@')?`mailto:${D.email}`:''],['phone','PHONE',D.phone,D.phone?`tel:${D.phone.replace(/\s/g,'')}`:''],['pin','LOCATION',D.location,'']].filter(x=>x[2]);$('contact-list').innerHTML=contacts.map(([i,k,v,u])=>`<li><span class="contact-icon">${icon(i)}</span><div><small>${k}</small>${u?link(u,v,'contact-value'):`<span class="contact-value">${safe(v)}</span>`}</div></li>`).join('');
 let socials=[['GitHub',D.github],['LinkedIn',D.linkedin],['Scholar',D.googleScholar],['ORCID',D.orcid],['ResearchGate',D.researchGate]].filter(x=>x[1]);$('social-links').innerHTML=socials.map(([n,u])=>link(u,n,'social-button')).join('');let cv=$('cv-link');if(D.cvAvailable){cv.href=D.cv;cv.setAttribute('download','')}else{cv.removeAttribute('href');cv.title='Add your CV PDF and set cvAvailable to true in assets/content.js';cv.classList.add('disabled')}
 $('toggle-contacts').onclick=()=>{let open=$('sidebar-details').classList.toggle('expanded');$('toggle-contacts').setAttribute('aria-expanded',String(open))};
-const sections=[['About','about'],['Resume','resume'],['Projects','research'],['Publications','publications'],['Awards','awards'],['Sports and Travel','projects'],['Contact','contact']];$('navigation').innerHTML=sections.map(([label,key])=>`<button type="button" data-tab="${key}" aria-label="Show ${label}">${label}</button>`).join('');$('navigation').addEventListener('click',e=>{let b=e.target.closest('[data-tab]');if(b) location.hash=b.dataset.tab});window.addEventListener('hashchange',render);render();}
+const sections=[['About','about'],['Resume','resume'],['Projects','research'],['Publications','publications'],['Awards','awards'],['Sports and Travel','projects'],['Contact','contact']];
+$('navigation').innerHTML=sections.map(([label,key])=>`<button type="button" data-tab="${key}" aria-label="Show ${label}">${label}</button>`).join('')+`<button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode"><span aria-hidden="true">💡</span></button>`;
+applyTheme(getSavedTheme()==='dark'?'dark':'light',false);
+$('theme-toggle').addEventListener('click',()=>applyTheme(document.documentElement.getAttribute('data-theme')==='light'?'dark':'light'));
+$('navigation').addEventListener('click',e=>{let b=e.target.closest('[data-tab]');if(b) location.hash=b.dataset.tab});
+window.addEventListener('hashchange',render);render();}
 const card=(i,t,d)=>`<article class="feature-card">${icon(i)}<div><h4>${safe(t)}</h4><p>${safe(d)}</p></div></article>`;
 function about(){return heading('About Me')+`<div class="bio">${D.about.map(p=>`<p>${safe(p)}</p>`).join('')}</div><h3>What I Do</h3><div class="feature-grid">${D.highlights.map(h=>card(h.icon,h.title,h.description)).join('')}</div><h3>Research Interests</h3><div class="tag-cloud">${D.interests.map(v=>`<span>${safe(v)}</span>`).join('')}</div><h3>Languages</h3><div class="language-list">${D.languages.map(l=>`<div><strong>${safe(l.name)}</strong><span>${safe(l.level)}</span></div>`).join('')}</div>`}
 
@@ -103,3 +125,4 @@ function contact(){return heading('Contact','For research collaborations, opport
 function render(){let tab=location.hash.replace('#','').toLowerCase();let funcs={about,resume,research,publications,projects,awards,contact};if(!funcs[tab])tab='about';document.querySelectorAll('[data-tab]').forEach(b=>{let active=b.dataset.tab===tab;b.classList.toggle('active',active);b.setAttribute('aria-current',active?'page':'false')});$('panel').innerHTML=funcs[tab]();if(tab==='publications')$('pub-filters').addEventListener('click',e=>{let b=e.target.closest('[data-filter]');if(!b)return;document.querySelectorAll('#pub-filters button').forEach(x=>x.classList.toggle('selected',x===b));$('pub-list').innerHTML=pubCards(b.dataset.filter==='All'?D.publications:D.publications.filter(p=>p.type===b.dataset.filter))});if(tab==='research')$('project-filters').addEventListener('click',e=>{let b=e.target.closest('[data-filter]');if(!b)return;document.querySelectorAll('#project-filters button').forEach(x=>x.classList.toggle('selected',x===b));$('project-list').innerHTML=projectCards(b.dataset.filter==='All'?D.projects:D.projects.filter(p=>p.category===b.dataset.filter))});window.scrollTo({top:0,behavior:'instant'});}
 document.readyState==='loading'?document.addEventListener('DOMContentLoaded',init):init();
 })();
+
