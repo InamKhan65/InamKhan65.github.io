@@ -60,9 +60,9 @@ window.SITE = {
   }
 ],
   experience: [
-    {period:"Sep 2024 – Present",title:"Research Associate",place:"Beijing Institute of Technology · Beijing, China",details:"Developed a YOLOv11-based real-time customer detection and tracking system for retail video analytics. Built and evaluated LLM-based conversational agents with retrieval-augmented generation and domain-specific knowledge. Assessed model accuracy, inference efficiency, and reliability, integrating AI models into end-to-end systems."},
-    {period:"Nov 2023 – Jun 2024",title:"Computer Vision & Deep Learning Intern",place:"MK Techsol (Private) Limited · Islamabad, Pakistan",details:"Worked on drone-based human detection for aerial video analysis. Developed and tested CNN-based models for detection and recognition. Performed data preprocessing, training, evaluation, robustness analysis, and real-time optimization."},
-    {period:"Jan 2023 – Nov 2023",title:"Research Assistant",place:"Smart Technology Lab, Islamia College University Peshawar · Pakistan",details:"Worked on CNN-based facial emotion recognition and developed EasyMath, an augmented reality application for interactive mathematics learning. Tested recognition accuracy, system reliability, and interactive AI/AR applications."}
+    {period:"Sep 2024 – Present",title:"Research Assistant",place:"Beijing Institute of Technology · Beijing, China",details:"Developed a YOLOv11-based real-time customer detection and tracking system for retail video analytics. Built and evaluated LLM-based conversational agents with retrieval-augmented generation and domain-specific knowledge. Assessed model accuracy, inference efficiency, and reliability, integrating AI models into end-to-end systems."},
+    {period:"Nov 2023 – Jun 2024",title:"Unity Developer",place:"MK Techsol (Private) Limited · Islamabad, Pakistan",details:"Worked on drone-based human detection for aerial video analysis. Developed and tested CNN-based models for detection and recognition. Performed data preprocessing, training, evaluation, robustness analysis, and real-time optimization."},
+    {period:"Jan 2023 – Nov 2023",title:"Research Intern",place:"Smart Technology Lab, Islamia College University Peshawar · Pakistan",details:"Worked on CNN-based facial emotion recognition and developed EasyMath, an augmented reality application for interactive mathematics learning. Tested recognition accuracy, system reliability, and interactive AI/AR applications."}
   ],
   skillGroups: [
     {title:"Programming",items:["Python","C++","Java","C#"]},
