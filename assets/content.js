@@ -35,7 +35,7 @@ window.SITE = {
     {name:"Urdu",level:"National language"},
      {name:"Pashto",level:"Native"}
   ],
-  interests: ["AI Agents","Agentic AI","Multi-Agent Systems","Large Language Models (LLMs)","Retrieval-Augmented Generation (RAG)","Intelligent Autonomous Systems","AI in Education","Educational Technology","Intelligent Tutoring Systems","Personalized Learning","Augmented Reality (AR)","Computer Vision","Machine Learning","Deep Learning","Human-Centered AI","Human-Computer Interaction"],
+  interests: ["AI Agents","Agentic AI","Multi-Agent Systems","Large Language Models (LLMs)","Retrieval-Augmented Generation (RAG)","Intelligent Autonomous Systems","AI in Education","Educational Technology","Intelligent Tutoring Systems","Personalized Learning","Augmented Reality (AR)","Computer Vision","Machine Learning","Deep Learning","Human-Computer Interaction"],
 
   education: [
   {
@@ -46,7 +46,7 @@ window.SITE = {
     thesis: "Design and Evaluation of an AI-Based Real-Time Customer Support Agent",
     supervisorName: "Professor Zhao Fengnian",
     supervisorUrl: "https://cs.bit.edu.cn/szdw/jsml/sssds/441430e4ba2248e1b7ecd43d8a2d9214.htm",
-    funding: "Chinese Government Scholarship (CSC), fully funded."
+    funding: "Chinese Government Scholarship (CSC), (fully funded)."
   },
   {
     period: "Aug 2019 – Sep 2023",
@@ -56,7 +56,7 @@ window.SITE = {
     thesis: "Development of an Augmented Reality-Based Educational System with Interactive Visualization",
     supervisorName: "Associate Professor Atif Khan",
     supervisorUrl: "https://scholar.google.com/citations?user=3iI5cKEAAAAJ&hl=en",
-    funding: "Ehsaas Government Scholarship.",
+    funding: "Ehsaas Government Scholarship, (fully funded).",
     honors: "Silver medalist, batch 2019–2023."
   }
 ],
@@ -68,7 +68,7 @@ window.SITE = {
     details: "Project: AI-Based Real-Time Customer Support Agent.\nProject: Pedestrian Detection and Tracking Using YOLOv11."
 },
 {
-    period: "Nov 2023 – Jun 2024",
+    period: "Nov 2023 – Jul 2024",
     title: "Unity Developer",
     place: "MK Techsol (Private) Limited · Islamabad, Pakistan",
     details: "Project: ABC Explorer – An Interactive Educational Application for Beginners."
@@ -98,16 +98,15 @@ window.SITE = {
     {title:"Real-Time Facial Emotion Recognition",category:"Computer Vision",icon:"eye",description:"Researched a CNN-based system for facial expression recognition, with experimental evaluation of recognition accuracy and system reliability.",tools:["CNN","Facial Expression Recognition","Deep Learning"],image:"",url:"",code:""}
   ],
   publications: [
-    {type:"Journal",year:"2026",status:"Under Review",title:"EasyMath: A Fun and Interactive Augmented Reality Math Learning Application for Kids",authors:"Inam Ullah, Faiz Ullah, Sufyan Danish, Hilal Muhammad, Zuo Cong, Shafiullah Khan, L. Minh Dang",venue:"Entertainment Computing · Manuscript ENTCOM-D-25-00534",doi:"",pdf:"",bibtex:""},
-    {type:"Journal",year:"2026",status:"Under Review",title:"Design and Evaluation of an LLM-Based Conversational Agent for Real-Time Customer Support",authors:"Inam Ullah, Sufyan Danish, Hilal Muhammad, Zhao Fengnian, Shafiullah Khan, L. Minh Dang",venue:"Computers in Human Behavior · Manuscript under review",doi:"",pdf:"",bibtex:""}
+    {type:"Journal",year:"2026",status:"Under Review",title:"EasyMath: A Fun and Interactive Augmented Reality Math Learning Application for Kids",authors:"Inam Ullah, Faiz Ullah, Sufyan Danish, Zuo Cong, Shafiullah Khan, L. Minh Dang",venue:"Virtual Reality & Intelligent Hardware · Manuscript  VRIH-D-26-00184",doi:"",pdf:"",bibtex:""},
+    {type:"Journal",year:"2026",status:"Under Review",title:"Retrieval-Grounded and State-Aware Task Execution for Multi-Turn Customer Support",authors:"Inam Ullah, Sufyan Danish, Hilal Muhammad, Shafiullah Khan, L. Minh Dang, Cong Zuo",venue:"Computers in Human Behavior · Manuscript under review",doi:"",pdf:"",bibtex:""}
   ],
   awards: [
     {year:"2024–2026",title:"Chinese Government Scholarship (CSC)",source:"China",description:"Fully funded scholarship for master's studies at Beijing Institute of Technology."},
     {year:"2019–2023",title:"Ehsaas Scholarship",source:"Pakistan",description:"Fully funded undergraduate scholarship."},
     {year:"2023",title:"Silver Medalist",source:"Islamia College University Peshawar",description:"Bachelor's cohort 2019–2023."},
     {year:"2023",title:"BS Final Year Project Funding",source:"IGNITE, Pakistan",description:"Final-year project received support through IGNITE."},
-    {year:"",title:"Prime Minister's Laptop Scheme",source:"Pakistan",description:"Awarded a laptop under the national scheme."},
-    {year:"",title:"Weibo Interaction Prediction — Top 0.5%",source:"Machine-learning competition",description:"Ranked 38th among 6,758 teams."}
+    {year:"",title:"Prime Minister's Laptop Scheme",source:"Pakistan",description:"Awarded a laptop under the national scheme."}
   ],
   additional: [
     {title:"Zhongguancun Forum (ZGC Forum)",description:"New Quality Productive Forces and Global Science and Technology Cooperation Conference · Beijing, China · March 7–31, 2025."},
@@ -115,12 +114,12 @@ window.SITE = {
   ],
 
   // Fill these sections with your REAL sports and travel memories; no entries are invented.
-  sportsIntro:"My sports interests and activities. I will add personal photographs, favorite sports, and achievements here.",
+  sportsIntro:"Updates, photographs, memorable moments, and highlights from my sports interests and activities will be shared here soon.",
   sports: [
     // Example: {title:"Cricket",description:"I enjoy playing cricket...",image:"Pictures/cricket.jpg",location:"",date:""}
   ],
-  travelIntro:"Places I have visited, memorable experiences, and travel photography.",
+  travelIntro:"Travel photographs, stories, and memorable experiences from the places I visit will be added here soon. Stay tuned!",
   travel: [
-    // Example: {title:"Trip to ...",description:"A few words about the trip...",image:"Pictures/trip.jpg",location:"City, Country",date:"2026"}
+    // Example: {title:"I'll upload it soon"}
   ]
 };
