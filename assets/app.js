@@ -80,7 +80,7 @@ const timeline = (title, items) => `
 
           ${v.honors ? `<p${detailStyle}><strong>Honors:</strong> ${safe(v.honors)}</p>` : ''}
 
-          ${v.details ? `<p>${safe(v.details)}</p>` : ''}
+        ${v.details ? `<p>${safe(v.details).replace(/\r?\n/g, '<br>')}</p>` : ''}
         </li>
       `;
     }).join('')}
