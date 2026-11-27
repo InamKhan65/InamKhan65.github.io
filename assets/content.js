@@ -11,7 +11,7 @@ window.SITE = {
   email: "inamkhan@bit.edu.cn",
   alternateEmail: "191265@icp.edu.pk",
   phone: "+86 188 1303 5892", // To hide this publicly, set phone: ""
-  location: "Beijing, China",
+  location: "Beijing, China | Originally from Swat, Pakistan",
   cv: "assets/Inam_Ullah_CV.pdf",
   cvAvailable: true,
   github: "https://github.com/InamKhan65",
@@ -31,36 +31,15 @@ window.SITE = {
   ],
   languages: [
     {name:"English",level:"Fluent"},
-    {name:"Chinese",level:"Intermediate level"},
-    {name:"Urdu",level:"National language"},
-     {name:"Pashto",level:"native language"}
+    {name:"Chinese",level:"Intermediate"},
+    {name:"Urdu",level:"National language"}
   ],
-  interests: ["AI Agents","Agentic AI","Multi-Agent Systems","Large Language Models (LLMs)","Retrieval-Augmented Generation (RAG)","Intelligent Autonomous Systems","AI in Education","Educational Technology","Intelligent Tutoring Systems","Personalized Learning","Augmented Reality (AR)","Computer Vision","Machine Learning","Deep Learning","Human-Computer Interaction"],
+  interests: ["AI Agents","Agentic AI","Multi-Agent Systems","Large Language Models (LLMs)","Retrieval-Augmented Generation (RAG)","Intelligent Autonomous Systems","AI in Education","Educational Technology","Intelligent Tutoring Systems","Personalized Learning","Augmented Reality (AR)","Computer Vision","Machine Learning","Deep Learning","Human-Centered AI","Human-Computer Interaction"],
 
-education: [
-  {
-    period: "Sep 2024 – Jul 2026",
-    title: "MS, Computer Science and Technology",
-    place: "Beijing Institute of Technology · Beijing, China",
-    gpa: "3.70/4.00",
-    thesis: "Design and Evaluation of an AI-Based Real-Time Customer Support Agent",
-    supervisorName: "Professor Zhao Fengnian",
-    supervisorUrl: "https://cs.bit.edu.cn/szdw/jsml/sssds/441430e4ba2248e1b7ecd43d8a2d9214.htm",
-    funding: "Chinese Government Scholarship (CSC), fully funded."
-  },
-  {
-    period: "Aug 2019 – Sep 2023",
-    title: "BS, Computer Science",
-    place: "Islamia College University Peshawar · Peshawar, Pakistan",
-    gpa: "3.75/4.00",
-    thesis: "Development of an Augmented Reality-Based Educational System with Interactive Visualization",
-    supervisorName: "Associate Professor Atif Khan",
-    supervisorUrl: "https://scholar.google.com/citations?user=3iI5cKEAAAAJ&hl=en",
-    funding: "Ehsaas Government Scholarship.",
-    honors: "Silver medalist, batch 2019–2023."
-  }
-],
-  
+  education: [
+    {period:"Sep 2024 – Jul 2026",title:"MS, Computer Science and Technology",place:"Beijing Institute of Technology · Beijing, China",details:"GPA: 3.70/4.00. Thesis: Design and Evaluation of an AI-Based Real-Time Customer Support Agent. Supervisor: Professor Zhao Fengnian. Chinese Government Scholarship (CSC), fully funded. Coursework included machine learning, deep learning, computer vision, NLP, neural networks, and research methodology."},
+    {period:"Aug 2019 – Sep 2023",title:"BS, Computer Science",place:"Islamia College University Peshawar · Peshawar, Pakistan",details:"GPA: 3.75/4.00. Thesis: Development of an Augmented Reality-Based Educational System with Interactive Visualization. Supervisor: Associate Professor Atif Khan. Ehsaas Government Scholarship. Silver medalist, batch 2019–2023."}
+  ],
   experience: [
     {period:"Sep 2024 – Present (as listed on CV)",title:"Research Associate",place:"Beijing Institute of Technology · Beijing, China",details:"Developed a YOLOv11-based real-time customer detection and tracking system for retail video analytics. Built and evaluated LLM-based conversational agents with retrieval-augmented generation and domain-specific knowledge. Assessed model accuracy, inference efficiency, and reliability, integrating AI models into end-to-end systems."},
     {period:"Nov 2023 – Jun 2024",title:"Computer Vision & Deep Learning Intern",place:"MK Techsol (Private) Limited · Islamabad, Pakistan",details:"Worked on drone-based human detection for aerial video analysis. Developed and tested CNN-based models for detection and recognition. Performed data preprocessing, training, evaluation, robustness analysis, and real-time optimization."},
@@ -76,12 +55,12 @@ education: [
 
   // All six research projects from the CV are shown in the PROJECTS navigation tab.
   projects: [
-  {title:"AI-Based Real-Time Customer Support System (MS Thesis)",category:"AI & NLP",icon:"brain",description:"Developed an LLM-based customer support agent using retrieval-augmented generation and a domain-specific knowledge base. Evaluated response quality, retrieval effectiveness, and real-time performance.",tools:["LLMs","RAG","NLP","Python"],image:"",url:"",code:""},
-{title:"Real-Time Customer Detection and Tracking Using YOLOv11",category:"Computer Vision",icon:"eye",description:"Designed a deep-learning computer vision system to detect and track customers in retail footage, evaluating detection accuracy, tracking performance, and real-time processing.",tools:["YOLOv11","Computer Vision","Object Tracking","Python"],image:"",url:"",code:""},
-{title:"EasyMath: Augmented Reality Mathematics Learning",category:"Augmented Reality",icon:"layers",description:"Developed an interactive augmented reality educational application for early mathematics learning, using visualization to make mathematical concepts more engaging.",tools:["Augmented Reality","Educational Technology","Interactive Visualization"],image:"",url:"",code:""},
-{title:"Weibo Social Network Interaction Prediction",category:"Machine Learning",icon:"chart",description:"Built an end-to-end predictive pipeline using more than 1.2 million Weibo records. Engineered content, temporal, and user features and evaluated supervised learning models. Ranked 38th of 6,758 teams (top 0.5%).",tools:["Python","Machine Learning","Feature Engineering","Data Analysis"],image:"",url:"",code:""},
-{title:"Drone-Based Human Detection for Aerial Video Analysis",category:"Computer Vision",icon:"eye",description:"Explored human detection from drone imagery using CNN-based models; performed data preprocessing, training, testing, and analysis of detection robustness and computational efficiency.",tools:["CNN","Computer Vision","Deep Learning"],image:"",url:"",code:""},
-{title:"Real-Time Facial Emotion Recognition",category:"Computer Vision",icon:"eye",description:"Researched a CNN-based system for facial expression recognition, with experimental evaluation of recognition accuracy and system reliability.",tools:["CNN","Facial Expression Recognition","Deep Learning"],image:"",url:"",code:""}
+    {title:"Weibo Social Network Interaction Prediction",category:"Machine Learning",icon:"chart",description:"Built an end-to-end predictive pipeline using more than 1.2 million Weibo records. Engineered content, temporal, and user features and evaluated supervised learning models. Ranked 38th of 6,758 teams (top 0.5%).",tools:["Python","Machine Learning","Feature Engineering","Data Analysis"],image:"",url:"",code:""},
+    {title:"Real-Time Customer Detection and Tracking Using YOLOv11",category:"Computer Vision",icon:"eye",description:"Designed a deep-learning computer vision system to detect and track customers in retail footage, evaluating detection accuracy, tracking performance, and real-time processing.",tools:["YOLOv11","Computer Vision","Object Tracking","Python"],image:"",url:"",code:"",repo:"https://github.com/InamKhan65/Pedestrian-Detection-Project"},
+    {title:"AI-Based Real-Time Customer Support System (MS Thesis)",category:"AI & NLP",icon:"brain",description:"Developed an LLM-based customer support agent using retrieval-augmented generation and a domain-specific knowledge base. Evaluated response quality, retrieval effectiveness, and real-time performance.",tools:["LLMs","RAG","NLP","Python"],image:"",url:"",code:"",repo:"https://github.com/InamKhan65/AI-Agent-for-Customer-service"},
+    {title:"Drone-Based Human Detection for Aerial Video Analysis",category:"Computer Vision",icon:"eye",description:"Explored human detection from drone imagery using CNN-based models; performed data preprocessing, training, testing, and analysis of detection robustness and computational efficiency.",tools:["CNN","Computer Vision","Deep Learning"],image:"",url:"",code:""},
+    {title:"Real-Time Facial Emotion Recognition",category:"Computer Vision",icon:"eye",description:"Researched a CNN-based system for facial expression recognition, with experimental evaluation of recognition accuracy and system reliability.",tools:["CNN","Facial Expression Recognition","Deep Learning"],image:"",url:"",code:""},
+    {title:"EasyMath: Augmented Reality Mathematics Learning",category:"Augmented Reality",icon:"layers",description:"Developed an interactive augmented reality educational application for early mathematics learning, using visualization to make mathematical concepts more engaging.",tools:["Augmented Reality","Educational Technology","Interactive Visualization"],image:"",url:"",code:"",repo:"https://github.com/InamKhan65/EasyMath-AR-Project"}
   ],
   publications: [
     {type:"Journal",year:"2026",status:"Under Review",title:"EasyMath: A Fun and Interactive Augmented Reality Math Learning Application for Kids",authors:"Inam Ullah, Faiz Ullah, Sufyan Danish, Hilal Muhammad, Zuo Cong, Shafiullah Khan, L. Minh Dang",venue:"Entertainment Computing · Manuscript ENTCOM-D-25-00534",doi:"",pdf:"",bibtex:""},
