@@ -3,7 +3,7 @@
 const D=window.SITE;
 const $=id=>document.getElementById(id);
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const valid=url=>{try{const u=new URL(url,window.location.href);return ['http:','https:','mailto:'].includes(u.protocol)}catch{return false}};
+const valid=url=>{try{const u=new URL(url,window.location.href);return ['http:','https:','mailto:,'tel:'].includes(u.protocol)}catch{return false}};
 const link=(url,text,cls='')=>url&&valid(url)?`<a class="${cls}" href="${safe(url)}" ${/^https?:/i.test(url)?'target="_blank" rel="noopener noreferrer"':''}>${safe(text)} ↗</a>`:'';
 const icons={mail:'✉',phone:'♧',pin:'⌖',github:'⌘',linkedin:'in',scholar:'🎓',orcid:'◉',research:'◇',code:'⌘',brain:'✧',chart:'▥',users:'♧',eye:'◎',layers:'▣',book:'▤',briefcase:'▱',star:'✶'};
 const icon=i=>`<span class="glyph" aria-hidden="true">${icons[i]||'✦'}</span>`;
