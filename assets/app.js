@@ -2,6 +2,12 @@
 'use strict';
 const D=window.SITE;
 const $=id=>document.getElementById(id);
+if (!document.getElementById('project-card-link-style')) {
+  const projectCardStyle = document.createElement('style');
+  projectCardStyle.id = 'project-card-link-style';
+  projectCardStyle.textContent = '.project-card-link{display:block;color:inherit;text-decoration:none;cursor:pointer;transition:transform .18s ease,border-color .18s ease}.project-card-link:hover{color:inherit;text-decoration:none;border-color:var(--gold);transform:translateY(-2px)}.project-repo-label{display:inline-block;margin-top:14px;color:var(--gold);font-size:12px;font-weight:600}';
+  document.head.appendChild(projectCardStyle);
+}
 const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const valid=url=>{try{const u=new URL(url,window.location.href);return ['http:','https:','mailto:','tel:'].includes(u.protocol)}catch{return false}};
 const link=(url,text,cls='')=>url&&valid(url)?`<a class="${cls}" href="${safe(url)}" ${/^https?:/i.test(url)?'target="_blank" rel="noopener noreferrer"':''}>${safe(text)} ↗</a>`:'';
@@ -21,6 +27,10 @@ const timeline = (title, items) => `
   <h3>${icon(title === 'Education' ? 'book' : 'briefcase')}${safe(title)}</h3>
   <ol>
     ${items.map(v => {
+      const detailStyle = title === 'Education'
+        ? ' class="education-detail" style="margin: 0 0 6px; line-height: 1.55;"'
+        : '';
+
       const supervisor = v.supervisorName
         ? (v.supervisorUrl && valid(v.supervisorUrl)
             ? `<a href="${safe(v.supervisorUrl)}"
@@ -38,15 +48,15 @@ const timeline = (title, items) => `
           <h4>${safe(v.title)}</h4>
           <p class="muted">${safe(v.place)}</p>
 
-          ${v.gpa ? `<p><strong>GPA:</strong> ${safe(v.gpa)}</p>` : ''}
+          ${v.gpa ? `<p${detailStyle}><strong>CGPA:</strong> ${safe(v.gpa)}</p>` : ''}
 
-          ${v.thesis ? `<p><strong>Thesis:</strong> ${safe(v.thesis)}</p>` : ''}
+          ${v.thesis ? `<p${detailStyle}><strong>Thesis:</strong> ${safe(v.thesis)}</p>` : ''}
 
-          ${supervisor ? `<p><strong>Supervisor:</strong> ${supervisor}</p>` : ''}
+          ${supervisor ? `<p${detailStyle}><strong>Supervisor:</strong> ${supervisor}</p>` : ''}
 
-          ${v.funding ? `<p><strong>Funding:</strong> ${safe(v.funding)}</p>` : ''}
+          ${v.funding ? `<p${detailStyle}><strong>Funding:</strong> ${safe(v.funding)}</p>` : ''}
 
-          ${v.honors ? `<p><strong>Honors:</strong> ${safe(v.honors)}</p>` : ''}
+          ${v.honors ? `<p${detailStyle}><strong>Honors:</strong> ${safe(v.honors)}</p>` : ''}
 
           ${v.details ? `<p>${safe(v.details)}</p>` : ''}
         </li>
@@ -58,7 +68,34 @@ function resume(){return heading('Resume','Education, professional experience, a
 function research(){return heading('Projects','Research projects, experiments, and practical AI systems.')+`<div class="filters" id="project-filters">${['All',...new Set(D.projects.map(p=>p.category))].map((x,i)=>`<button data-filter="${safe(x)}" class="${i===0?'selected':''}">${safe(x)}</button>`).join('')}</div><div class="project-grid" id="project-list">${projectCards(D.projects)}</div>`}
 function publications(){let data=D.publications;return heading('Publications','Journal articles, conference papers, and scholarly contributions.')+`<div class="filters" id="pub-filters"><button class="selected" data-filter="All">All</button><button data-filter="Journal">Journal</button><button data-filter="Conference">Conference</button></div><div id="pub-list">${pubCards(data)}</div>`}
 function pubCards(data){return data.length?data.map((p,i)=>`<article class="publication"><span class="pub-number">${String(i+1).padStart(2,'0')}</span><div><div class="publication-meta"><span class="category">${safe(p.type)}</span><span>${safe(p.year)}</span>${p.status?`<span class="category">${safe(p.status)}</span>`:''}</div><h4>${safe(p.title)}</h4><p>${safe(p.authors)}</p><p class="muted"><em>${safe(p.venue)}</em></p><div class="card-links">${link(p.doi,'DOI')}${link(p.pdf,'PDF')}${link(p.bibtex,'BibTeX')}</div></div></article>`).join(''):'<p>No items to show.</p>'}
-function projectCards(data){return data.map((p,i)=>`<article class="project-card">${p.image?`<img src="${safe(p.image)}" alt="${safe(p.title)}" loading="lazy">`:`<div class="project-art art-${i%4}">${icon(p.icon)}</div>`}<div class="project-body"><span class="category">${safe(p.category)}</span><h4>${safe(p.title)}</h4><p>${safe(p.description)}</p><div class="project-tools">${p.tools.map(t=>`<span>${safe(t)}</span>`).join('')}</div><div class="card-links">${link(p.url,'Details')}${link(p.code,'Source code')}</div></div></article>`).join('')}
+function projectCards(data) {
+  return data.map((p, i) => {
+    const visual = p.image
+      ? `<img src="${safe(p.image)}" alt="${safe(p.title)}" loading="lazy">`
+      : `<div class="project-art art-${i % 4}">${icon(p.icon)}</div>`;
+
+    const body = `
+      <div class="project-body">
+        <span class="category">${safe(p.category)}</span>
+        <h4>${safe(p.title)}</h4>
+        <p>${safe(p.description)}</p>
+        <div class="project-tools">${p.tools.map(t => `<span>${safe(t)}</span>`).join('')}</div>
+        ${p.repo && valid(p.repo)
+          ? `<span class="project-repo-label">View GitHub repository ↗</span>`
+          : `<div class="card-links">${link(p.url, 'Details')}${link(p.code, 'Source code')}</div>`}
+      </div>`;
+
+    if (p.repo && valid(p.repo)) {
+      return `<a class="project-card project-card-link"
+        href="${safe(p.repo)}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open ${safe(p.title)} GitHub repository">${visual}${body}</a>`;
+    }
+
+    return `<article class="project-card">${visual}${body}</article>`;
+  }).join('');
+}
 function memoryCards(data,kind){return data.length?`<div class="project-grid">${data.map((p,i)=>`<article class="project-card">${p.image?`<img src="${safe(p.image)}" alt="${safe(p.title)}" loading="lazy">`:`<div class="project-art art-${i%4}">${icon(kind==='Sports'?'star':'pin')}</div>`}<div class="project-body"><span class="category">${safe(kind)}</span><h4>${safe(p.title)}</h4>${p.location?`<p class="muted">${safe(p.location)}</p>`:''}${p.date?`<p class="muted">${safe(p.date)}</p>`:''}<p>${safe(p.description)}</p></div></article>`).join('')}</div>`:'<p class="hint">Photos and stories coming soon. Add entries in assets/content.js to personalize this section.</p>'}
 function projects(){return heading('Sports and Travel','My life beyond research and work.')+`<h3>Sports</h3><p class="lead">${safe(D.sportsIntro)}</p>${memoryCards(D.sports,'Sports')}<h3>Travel</h3><p class="lead">${safe(D.travelIntro)}</p>${memoryCards(D.travel,'Travel')}`}
 function awards(){return heading('Awards & Activities')+`<h3>Honors & Awards</h3><div class="awards-list">${D.awards.map(a=>`<article>${icon('star')}<div><small>${safe(a.year)}</small><h4>${safe(a.title)}</h4><p class="muted">${safe(a.source)}</p><p>${safe(a.description)}</p></div></article>`).join('')}</div><h3>Academic & Professional Activities</h3><div class="feature-grid">${D.additional.map(a=>card('users',a.title,a.description)).join('')}</div>`}
