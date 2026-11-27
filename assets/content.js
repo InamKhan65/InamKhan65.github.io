@@ -62,10 +62,10 @@ window.SITE = {
 ],
   experience: [
    {
-    period: "Sep 2024 – Present",
-    title: "Research Assistant",
-    place: "Beijing Institute of Technology · Beijing, China",
-    details: "Project: AI-Based Real-Time Customer Support Agent.\nProject: Pedestrian Detection and Tracking Using YOLOv11."
+    period:"Sep 2024 – Present",
+    title:"Research Assistant",
+    place:"Beijing Institute of Technology · Beijing, China",
+    details:"Project 2: AI-Based Real-Time Customer Support Agent.\nProject 1: Real-Time Pedestrian Detection and Tracking for Retail Video Analytics Using YOLOv11."
 },
 {
     period: "Nov 2023 – Jul 2024",
