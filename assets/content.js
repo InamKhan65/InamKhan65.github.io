@@ -11,7 +11,7 @@ window.SITE = {
   email: "inamkhan@bit.edu.cn",
   alternateEmail: "191265@icp.edu.pk",
   phone: "+86 188 1303 5892", // To hide this publicly, set phone: ""
-  location: "Beijing, China | Originally from Swat, Pakistan",
+  location: "Beijing, China ",
   cv: "assets/Inam_Ullah_CV.pdf",
   cvAvailable: true,
   github: "https://github.com/InamKhan65",
@@ -19,9 +19,9 @@ window.SITE = {
   googleScholar: "", orcid: "", researchGate: "",
 
   about: [
-    "Hello! I am Inam Ullah, a computer science researcher with an MS in Computer Science and Technology from Beijing Institute of Technology, China. My primary research interests are AI agents, agentic AI, and multi-agent systems, with a particular interest in building intelligent systems that can retrieve information, interact with users, and support complex tasks.",
-    "My experience includes developing LLM-based conversational applications using retrieval-augmented generation (RAG), computer vision systems for human detection and tracking, and an augmented reality application for interactive mathematics learning. I am interested in extending this work toward more capable AI agents and exploring how agentic AI can support education and personalized learning.",
-    "My broader interests also include computer vision and machine learning, including object detection, visual recognition, deep learning models, and the evaluation of practical AI systems. I aim to connect research with useful, reliable, and human-centered applications."
+    "Hello! I am Inam Ullah, a computer science researcher with an MS in Computer Science and Technology from Beijing Institute of Technology, China. My primary research interests are artificial intelligence, particularly AI agents, agentic AI, and multi-agent systems. I am interested in developing intelligent systems that can understand user needs, interact autonomously, retrieve information, and perform complex tasks.",
+    "My research also focuses on educational technology and AI in education, including intelligent tutoring, personalized learning, and augmented reality (AR)-based educational applications. I am also interested in machine learning and computer vision, particularly deep learning, object detection, human tracking, and visual recognition. I enjoy exploring how these technologies can be combined to develop practical solutions for real-world challenges.",
+    "I have hands-on experience developing AI-based applications, including LLM-powered conversational systems using retrieval-augmented generation (RAG), computer vision systems, and interactive AR applications. My technical skills include Python, C/C++, MATLAB, OpenCV, Git, and CMake. I enjoy translating research ideas into practical, reliable, and user-oriented software solutions."
   ],
   highlights: [
     {icon:"brain",title:"AI Agents & Multi-Agent Systems",description:"LLM-based conversational applications, retrieval-augmented generation (RAG), intelligent assistants, and emerging agentic and multi-agent architectures."},
@@ -32,7 +32,8 @@ window.SITE = {
   languages: [
     {name:"English",level:"Fluent"},
     {name:"Chinese",level:"Intermediate"},
-    {name:"Urdu",level:"National language"}
+    {name:"Urdu",level:"National language"},
+     {name:"Pashto",level:"Native"}
   ],
   interests: ["AI Agents","Agentic AI","Multi-Agent Systems","Large Language Models (LLMs)","Retrieval-Augmented Generation (RAG)","Intelligent Autonomous Systems","AI in Education","Educational Technology","Intelligent Tutoring Systems","Personalized Learning","Augmented Reality (AR)","Computer Vision","Machine Learning","Deep Learning","Human-Centered AI","Human-Computer Interaction"],
 
@@ -60,9 +61,24 @@ window.SITE = {
   }
 ],
   experience: [
-    {period:"Sep 2024 – Present",title:"Research Assistant",place:"Beijing Institute of Technology · Beijing, China",details:"Developed a YOLOv11-based real-time customer detection and tracking system for retail video analytics. Built and evaluated LLM-based conversational agents with retrieval-augmented generation and domain-specific knowledge. Assessed model accuracy, inference efficiency, and reliability, integrating AI models into end-to-end systems."},
-    {period:"Nov 2023 – Jun 2024",title:"Unity Developer",place:"MK Techsol (Private) Limited · Islamabad, Pakistan",details:"Worked on drone-based human detection for aerial video analysis. Developed and tested CNN-based models for detection and recognition. Performed data preprocessing, training, evaluation, robustness analysis, and real-time optimization."},
-    {period:"Jan 2023 – Nov 2023",title:"Research Intern",place:"Smart Technology Lab, Islamia College University Peshawar · Pakistan",details:"Worked on CNN-based facial emotion recognition and developed EasyMath, an augmented reality application for interactive mathematics learning. Tested recognition accuracy, system reliability, and interactive AI/AR applications."}
+   {
+    period: "Sep 2024 – Present",
+    title: "Research Assistant",
+    place: "Beijing Institute of Technology · Beijing, China",
+    details: "Project: AI-Based Real-Time Customer Support Agent.\nProject: Pedestrian Detection and Tracking Using YOLOv11."
+},
+{
+    period: "Nov 2023 – Jun 2024",
+    title: "Unity Developer",
+    place: "MK Techsol (Private) Limited · Islamabad, Pakistan",
+    details: "Project: ABC Explorer – An Interactive Educational Application for Beginners."
+},
+{
+    period: "Jan 2023 – Nov 2023",
+    title: "Research Intern",
+    place: "Smart Technology Lab, Islamia College University Peshawar · Pakistan",
+    details: "Worked on CNN-based facial emotion recognition and developed EasyMath, an augmented reality application for interactive mathematics learning. Tested recognition accuracy, system reliability, and interactive AI/AR applications."
+}
   ],
   skillGroups: [
     {title:"Programming",items:["Python","C++","Java","C#"]},
